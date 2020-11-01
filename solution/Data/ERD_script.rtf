@@ -8,7 +8,7 @@
 \f0\fs24 \cf0 card_holder\
 -\
 id INT PK\
-name VARCHAR(255)\
+full_name VARCHAR(255)\
 \
 credit_card\
 -\
@@ -19,17 +19,17 @@ transaction\
 -\
 id INT PK\
 date VARCHAR(10)\
-amount INT\
+amount DECIMAL\
 card VARCHAR(20) FK >- credit_card.card\
 id_merchant INT FK >- merchant.id\
 \
 merchant\
 -\
 id INT PK\
-name VARCHAR(255)\
-id_merchant_category INT FK >- merchant_category.id\
+merch_name VARCHAR(255)\
+id_merchant_cat INT FK >- merchant_cat.id\
 \
-merchant_category\
+merchant_cat\
 -\
 id INT PK\
-name VARCHAR(255)}
+category VARCHAR(255)}
